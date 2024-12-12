@@ -11,7 +11,7 @@ async function getFile() {
     };
     req.send();
   });
-  document.getElementById("demo").innerHTML = await myPromise;
+  document.getElementById("data").innerHTML = await myPromise;
 }
 
 getFile();
