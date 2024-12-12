@@ -44,3 +44,10 @@ func2();
 
 // mySecond();
 // myFirst();
+
+let ypromise = new Promise(function (resolve) {
+  resolve("Oh my God");
+});
+ypromise.then(function (res) {
+  document.getElementById("promo").innerHTML = res;
+});
