@@ -79,3 +79,12 @@ async function myAsy() {
   document.getElementById("kanuma").innerHTML = await prom;
 }
 myAsy();
+
+const data = "https://jsonplaceholder.typicode.com/users";
+async function fetching() {
+  let a = await fetch(data);
+  let b = await a.text();
+  document.getElementById("dates").innerHTML = b;
+}
+
+fetching();
