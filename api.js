@@ -52,8 +52,11 @@ ypromise.then(function (res) {
   document.getElementById("promo").innerHTML = res;
 });
 
-function callBack(any) {
+function callBacka(any) {
   document.getElementById("kanu").innerHTML = any;
+}
+function callBack(any) {
+  document.getElementById("kanub").innerHTML = any;
 }
 
 function subBack(a, b, kanuma) {
@@ -61,3 +64,18 @@ function subBack(a, b, kanuma) {
   kanuma(sum);
 }
 subBack(4, 6, callBack);
+
+async function asyncFunc() {
+  return "This is async function";
+}
+asyncFunc().then(function (ina) {
+  callBacka(ina);
+});
+
+async function myAsy() {
+  let prom = new Promise(function (resolve, reject) {
+    resolve("This is an async func!");
+  });
+  document.getElementById("kanuma").innerHTML = await prom;
+}
+myAsy();
