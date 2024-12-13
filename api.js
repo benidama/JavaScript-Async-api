@@ -51,3 +51,13 @@ let ypromise = new Promise(function (resolve) {
 ypromise.then(function (res) {
   document.getElementById("promo").innerHTML = res;
 });
+
+function callBack(any) {
+  document.getElementById("kanu").innerHTML = any;
+}
+
+function subBack(a, b, kanuma) {
+  const sum = a + b;
+  kanuma(sum);
+}
+subBack(4, 6, callBack);
